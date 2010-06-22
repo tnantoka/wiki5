@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widget xmlns="http://www.w3.org/ns/widgets"
+        id="http://example.org/exampleWidget" version="2.0 Beta"
+        height="480"
+        width="320"
+        viewmodes="application">
+    <name short="w5">wiki5</name>
+    <description>Simple Wiki Like Script</description>
+    <author href="http://blog.bornneet.com/">tnantoka</author>
+</widget>

@@ -1,0 +1,21 @@
+@charset "UTF-8";
+
+#home .individual li {
+	width: 33%;
+}
+
+#wiki5_searchButton {
+	margin-right: 35px;
+}
+
+/*
+#wiki5_content, 
+#wiki5_importData, 
+#wiki5_exportData {
+	height: 300px;
+}
+*/
+
+#wiki5_searchForm {
+	display: none;
+}

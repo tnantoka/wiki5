@@ -1,0 +1,136 @@
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<title>wiki5</title>
+	<link rel="stylesheet" href="lib/jqtouch/jqtouch/jqtouch.min.css" />
+	<link rel="stylesheet" href="lib/jqtouch/themes/apple/theme.css" id="wiki5_themeCss" />
+	<link rel="stylesheet" href="style.css" />
+	<script src="lib/showdown/showdown.js"></script>
+	<script src="lib/jqtouch/jqtouch/jquery.1.3.2.min.js"></script>
+	<script src="lib/jqtouch/jqtouch/jqtouch.min.js"></script>
+	<script src="lib/json2.js"></script>
+	<script src="script.js"></script>
+</head>
+
+<div id="home">
+	<div class="toolbar">
+		<h1>wiki5</h1>
+		<a class="button cancel" href="#" id="wiki5_settingButton">setting</a>
+		<a class="button" href="#" id="wiki5_searchButton">search</a>
+		<a class="button slideup add" href="#new" id="wiki5_newButton">+</a>
+	</div>
+
+	<!-- floatingを使う手も有り？ -->
+	<div class="info" id="wiki5_searchForm">
+	<form>
+		<ul>
+			<li>
+				<input type="text" value="" id="wiki5_searchText" placeholder="search" />
+			</li>
+		</ul>
+	</form>
+	</div>
+
+	<ul id="wiki5_entry">
+	</ul>
+
+	<h2>Management</h2>
+	<ul class="individual">
+		<li id="wiki5_initButton"><a href="#">init</a></li>
+		<li id="wiki5_exportButton"><a href="#">export</a></li>
+		<li id="wiki5_importButton"><a href="#">import</a></li>
+	</ul>
+
+	<div class="info">
+		Powered by wiki5.<br />
+		&copy; <a href="http://blog.bornneet.com/">bornneet.com</a>
+	</div>
+</div>
+
+<div id="wiki5_setting">
+	<div class="toolbar">
+		<h1>setting</h1>
+		<a class="back" href="#">Home</a>
+	</div>
+	<form>
+		<h2>theme</h2>
+		<ul>
+			<li>
+				<select id="wiki5_theme">
+					<option value="apple">Apple</option>
+					<option value="jqt">jQTouch</option>
+				</select>
+			</li>
+		</ul>
+	</form>
+	<a href="#" class="grayButton goback">Close</a>
+</div>
+
+
+<div id="wiki5_search">
+
+
+	<a href="#" class="grayButton goback">Close</a>
+</div>
+
+<div id="wiki5_new">
+	<div class="toolbar">
+		<h1>New Entry</h1>
+		<a class="back" href="#">Home</a>
+	</div>
+	<form id="wiki5_newForm">
+		<ul>
+			<li>
+				<label for="title">title:</label>
+				<input type="text" value="" id="wiki5_title" />
+			</li>
+			<li>
+				<label for="content">content:</label>
+				<textarea id="wiki5_content"></textarea>
+			</li>
+		</ul>
+	</form>
+	<ul class="individual">
+		<li id="wiki5_reset"><a href="#">reset</a></li>
+		<li id="wiki5_submit"><a href="#">submit</a></li>
+	</ul>
+	<a href="#" class="grayButton goback">Close</a>
+</div>
+
+<div id="wiki5_export">
+	<div class="toolbar">
+		<h1>Export data</h1>
+		<a class="back" href="#">Home</a>
+	</div>
+	<form id="wiki5_exportForm">
+		<ul>
+			<li>
+				<textarea id="wiki5_exportData"></textarea>
+			</li>
+		</ul>
+	</form>
+	<a href="#" class="grayButton goback">Close</a>
+</div>
+
+<div id="wiki5_import">
+	<div class="toolbar">
+		<h1>Import Data</h1>
+		<a class="back" href="#">Home</a>
+	</div>
+	<form id="wiki5_importForm">
+		<ul>
+			<li>
+				<textarea id="wiki5_importData"></textarea>
+			</li>
+		</ul>
+	</form>
+	<ul class="individual">
+		<li id="wiki5_importReset"><a href="#">reset</a></li>
+		<li id="wiki5_importSubmit"><a href="#">import</a></li>
+	</ul>
+	<a href="#" class="grayButton goback">Close</a>
+</div>
+
+</body>
+</html>
+
