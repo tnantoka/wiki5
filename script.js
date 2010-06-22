@@ -72,7 +72,7 @@ $(function() {
 		$('#wiki5_content').val('');
 		initHome();
 //		jQT.goBack(); // 次の画面でHomeを押すとnewに戻ってきちゃう
-		jQT.goTo('#home', 'slidedown');
+		jQT.goTo('#home', 'slide');
 	});
 
 	$('#wiki5_reset').bind('tap', function() {
@@ -166,7 +166,7 @@ function initHome() {
 			var title = $(this).text();
 			var content = entries[title];
 
-			var div = $('#wiki5_' + title);
+			var div = $('#' + title);
 
 			// 存在しなければページを作る
 			if (div.length < 1) {
