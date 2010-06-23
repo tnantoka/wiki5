@@ -192,12 +192,12 @@ function initHome() {
 				});
 
 				div.find('.deleteButton').bind('tap', function(e) {
-					$('#wiki5_new h1').html('Copy Entry');
-					$('#wiki5_new .back').html(title);
-					$('#wiki5_title').val(title + '-copy');
-					$('#wiki5_content').val(entries[title]);
-					$('#wiki5_title').focus();
-					jQT.goTo('#wiki5_new', 'slideup');
+					if (confirm('Delete OK?')) {
+						delete entries[title];
+						localStorage.entries = JSON.stringify(entries);
+						initHome();		
+						jQT.goTo('#home', 'slide');
+					}
 				});
 
 			}
